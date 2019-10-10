@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    image: baffedu/aproxy:front
+    volumes: 
+      - ./code/:/var/www/html/
+    networks: 
+      baff:
+    ports: 
+      - 80:80
+
+networks:
+  baff:
+    external: true
